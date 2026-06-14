@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="it" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurea Hair Studio — Parrucchiere a Torino · Taglio, colore, trasformazioni</title>
+  <meta name="description" content="Aurea è l'hair studio di Torino dove un appuntamento non è mai solo un taglio: consulenza vera, colore su misura e pieghe che vivono bene anche a casa. Sito dimostrativo." />
+  <meta name="theme-color" content="#3A2044" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:title" content="Aurea Hair Studio — C'è chi taglia i capelli. E c'è chi li trasforma." />
+  <meta property="og:description" content="Hair studio a Torino: consulenza vera, colore su misura, pieghe che durano. Demo di sito web su misura." />
+  <meta property="og:image" content="assets/og.jpg" />
+
+  <link rel="preload" href="assets/fonts/montserrat-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Aurea Hair Studio",
+    "description": "Hair studio a Torino: taglio sartoriale, colore e balayage, trattamenti e acconciature. Sito dimostrativo.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via San Massimo 12",
+      "addressLocality": "Torino",
+      "postalCode": "10123",
+      "addressCountry": "IT"
+    },
+    "telephone": "+39 011 555 1234",
+    "priceRange": "€€",
+    "openingHours": ["Tu-Fr 09:00-19:00", "Sa 08:30-18:00"]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#servizi">Salta al contenuto</a>
+
+  <!-- ======================= NAV ======================= -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Aurea Hair Studio — torna su">
+        <svg class="nav__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="6.5" cy="17.5" r="2.6"/>
+          <circle cx="17.5" cy="17.5" r="2.6"/>
+          <path d="M8.6 15.6 17 3.5M15.4 15.6 7 3.5"/>
+        </svg>
+        <span class="nav__name">Aurea</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navigazione principale">
+        <a href="#servizi">Servizi</a>
+        <a href="#metodo">Il metodo</a>
+        <a href="#listino">Listino</a>
+        <a href="#recensioni">Recensioni</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn--gold btn--sm" href="#contatti">Prenota ora</a>
+        <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- mobile menu -->
+  <div class="menu" id="menu" hidden>
+    <nav class="menu__links" aria-label="Menu">
+      <a href="#servizi">Servizi</a>
+      <a href="#prima-dopo">Prima &amp; dopo</a>
+      <a href="#metodo">Il metodo</a>
+      <a href="#listino">Listino</a>
+      <a href="#recensioni">Recensioni</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <a class="btn btn--gold menu__cta" href="#contatti">Prenota ora</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ======================= HERO SCRUB ======================= -->
+    <section class="scrub" id="scrub" aria-label="Aurea Hair Studio — la trasformazione">
+      <div class="scrub__pin">
+
+        <div class="scrub__stage">
+          <img class="scrub__poster" id="scrubPoster"
+               src="assets/frames/f_000.webp"
+               alt="Ritratto di una donna prima della trasformazione: capelli mossi e spettinati su fondo bianco"
+               width="1000" height="1000" fetchpriority="high" decoding="async" />
+          <canvas class="scrub__canvas" id="scrubCanvas" aria-hidden="true"></canvas>
+        </div>
+
+        <div class="scrub__copy scrub__copy--a" id="copyA">
+          <p class="scrub__kicker">Aurea · Hair Studio — Torino</p>
+          <h1 class="scrub__title">C'è chi taglia<br />i capelli.</h1>
+        </div>
+
+        <div class="scrub__copy scrub__copy--b is-off" id="copyB">
+          <p class="scrub__title">E c'è chi li<br /><em class="hl">trasforma</em>.</p>
+        </div>
+
+        <div class="scrub__copy scrub__copy--c is-off" id="copyC">
+          <h2 class="scrub__title scrub__title--c">La tua versione<br />migliore ti aspetta.</h2>
+          <p class="scrub__lede">Consulenza gratuita, colore su misura e tagli che vivono bene anche fuori dal salone.</p>
+          <div class="scrub__cta">
+            <a class="btn btn--gold" href="#contatti">Prenota il tuo posto</a>
+            <a class="btn btn--ghost" href="#servizi">Scopri i servizi</a>
+          </div>
+        </div>
+
+        <div class="scrub__hint" id="scrubHint" aria-hidden="true">
+          <span>Scorri</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14m0 0 5-5m-5 5-5-5"/></svg>
+        </div>
+
+        <div class="scrub__progress" aria-hidden="true"><span id="scrubBar"></span></div>
+      </div>
+    </section>
+
+    <!-- ======================= MARQUEE ======================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marqueeTrack">
+        <div class="marquee__group">
+          <span>Taglio sartoriale</span><i>✦</i>
+          <span>Colore &amp; balayage</span><i>✦</i>
+          <span>Piega professionale</span><i>✦</i>
+          <span>Trattamenti ristrutturanti</span><i>✦</i>
+          <span>Acconciature sposa</span><i>✦</i>
+          <span>Consulenza gratuita</span><i>✦</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================= SERVIZI ======================= -->
+    <section class="section section--cream" id="servizi">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="overline overline--gold">I nostri servizi</p>
+          <h2>Tutto quello che serve<br />ai tuoi capelli.</h2>
+          <p class="section__lede">Pochi servizi, fatti molto bene. Ogni appuntamento comincia con una consulenza e finisce con un risultato che sai gestire anche a casa.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card card--gold reveal" style="--d:.05s">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="17.5" r="2.6"/><circle cx="17.5" cy="17.5" r="2.6"/><path d="M8.6 15.6 17 3.5M15.4 15.6 7 3.5"/></svg>
+            </div>
+            <h3>Taglio sartoriale</h3>
+            <p>Studiato sulla forma del viso e su come porti i capelli ogni giorno. Niente tagli fotocopia.</p>
+            <span class="card__price">da € 35</span>
+          </article>
+
+          <article class="card card--orange reveal" style="--d:.12s">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5s6 6.2 6 10.5a6 6 0 1 1-12 0C6 9.7 12 3.5 12 3.5Z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg>
+            </div>
+            <h3>Colore &amp; balayage</h3>
+            <p>Formule personalizzate e schiariture che crescono bene, senza stacchi netti dopo un mese.</p>
+            <span class="card__price">da € 70</span>
+          </article>
+
+          <article class="card card--teal reveal" style="--d:.19s">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
+            </div>
+            <h3>Trattamenti</h3>
+            <p>Ricostruzione, idratazione profonda e cura della cute: la salute viene prima dello styling.</p>
+            <span class="card__price">da € 25</span>
+          </article>
+
+          <article class="card card--lilac reveal" style="--d:.26s">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.1 4.6L19 9.7l-4.9 2.1L12 16.4l-2.1-4.6L5 9.7l4.9-2.1L12 3Z"/><path d="M18.5 15.5l.9 1.9 1.9.9-1.9.9-.9 1.9-.9-1.9-1.9-.9 1.9-.9.9-1.9Z"/></svg>
+            </div>
+            <h3>Sposa &amp; eventi</h3>
+            <p>Prove incluse e squadra anche a domicilio: il giorno giusto merita la piega giusta.</p>
+            <span class="card__price">su preventivo</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PRIMA / DOPO ======================= -->
+    <section class="section" id="prima-dopo">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="overline overline--teal">Prima &amp; dopo</p>
+          <h2>Il risultato parla da solo.</h2>
+          <p class="section__lede">Trascina il cursore: stessa persona, stesso giorno, novanta minuti da Aurea.</p>
+        </header>
+
+        <figure class="ba reveal" id="ba" style="--x:50%">
+          <img class="ba__img ba__img--after" src="assets/after.webp" alt="Dopo: piega a onde morbide e ordinate, colore luminoso" width="1200" height="1200" loading="lazy" decoding="async" />
+          <div class="ba__top" aria-hidden="true">
+            <img class="ba__img" src="assets/before.webp" alt="" width="1200" height="1200" loading="lazy" decoding="async" />
+          </div>
+          <div class="ba__handle" aria-hidden="true">
+            <span class="ba__grip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 3 12l6 6M15 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+          <span class="ba__tag ba__tag--before" aria-hidden="true">Prima</span>
+          <span class="ba__tag ba__tag--after" aria-hidden="true">Dopo</span>
+          <input class="ba__range" id="baRange" type="range" min="0" max="100" value="50" step="0.1" aria-label="Confronta prima e dopo: sposta il cursore" />
+          <figcaption class="ba__caption">Taglio scalato morbido, balayage miele e piega a onde naturali.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ======================= METODO ======================= -->
+    <section class="section section--plum" id="metodo">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="overline overline--gold">Il metodo Aurea</p>
+          <h2>Tre passaggi.<br />Nessuna fretta.</h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal" style="--d:.05s">
+            <span class="step__num">01</span>
+            <h3>Ascolto</h3>
+            <p>Quindici minuti di consulenza vera: forma del viso, abitudini, tempo che hai la mattina. Le forbici arrivano dopo.</p>
+          </li>
+          <li class="step reveal" style="--d:.15s">
+            <span class="step__num">02</span>
+            <h3>Trasformazione</h3>
+            <p>Tecniche aggiornate ogni stagione e prodotti professionali scelti per i tuoi capelli, non per il magazzino.</p>
+          </li>
+          <li class="step reveal" style="--d:.25s">
+            <span class="step__num">03</span>
+            <h3>Autonomia</h3>
+            <p>Esci sapendo esattamente come rifare la piega: ti mostriamo i gesti, i prodotti e le dosi. Niente segreti.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================= LISTINO ======================= -->
+    <section class="section" id="listino">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="overline overline--orange">Listino</p>
+          <h2>Prezzi chiari, zero sorprese.</h2>
+        </header>
+
+        <div class="prices reveal">
+          <dl class="prices__col">
+            <div class="price"><dt>Taglio &amp; piega</dt><span class="price__dots"></span><dd>€ 45</dd></div>
+            <div class="price"><dt>Piega</dt><span class="price__dots"></span><dd>€ 25</dd></div>
+            <div class="price"><dt>Colore radici</dt><span class="price__dots"></span><dd>€ 40</dd></div>
+            <div class="price"><dt>Balayage / degradé</dt><span class="price__dots"></span><dd>da € 90</dd></div>
+          </dl>
+          <dl class="prices__col">
+            <div class="price"><dt>Schiariture &amp; toner</dt><span class="price__dots"></span><dd>da € 110</dd></div>
+            <div class="price"><dt>Trattamento ristrutturante</dt><span class="price__dots"></span><dd>€ 30</dd></div>
+            <div class="price"><dt>Taglio bimbi</dt><span class="price__dots"></span><dd>€ 18</dd></div>
+            <div class="price"><dt>Acconciatura evento</dt><span class="price__dots"></span><dd>da € 50</dd></div>
+          </dl>
+        </div>
+
+        <p class="prices__note reveal">Ogni servizio parte da una consulenza gratuita di 15 minuti. Il prezzo definitivo te lo diciamo sempre prima di iniziare.</p>
+      </div>
+    </section>
+
+    <!-- ======================= RECENSIONI ======================= -->
+    <section class="section section--shell" id="recensioni">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="overline overline--gold">Dicono di noi</p>
+          <h2>Trecento recensioni,<br />una media: cinque stelle.</h2>
+        </header>
+
+        <div class="reviews">
+          <article class="review reveal" style="--d:.05s">
+            <div class="review__stars" role="img" aria-label="5 stelle su 5">
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+            </div>
+            <blockquote>«Prima volta che esco dal parrucchiere senza voglia di rifarmi la piega a casa. Il balayage è esattamente quello che avevo in testa.»</blockquote>
+            <footer><strong>Martina R.</strong><span>Google</span></footer>
+          </article>
+
+          <article class="review reveal" style="--d:.15s">
+            <div class="review__stars" role="img" aria-label="5 stelle su 5">
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+            </div>
+            <blockquote>«Mi hanno sconsigliato un trattamento che avevo chiesto io, perché non serviva. Onestà rara: ci torno a occhi chiusi.»</blockquote>
+            <footer><strong>Giulia T.</strong><span>Google</span></footer>
+          </article>
+
+          <article class="review reveal" style="--d:.25s">
+            <div class="review__stars" role="img" aria-label="5 stelle su 5">
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
+            </div>
+            <blockquote>«Atmosfera rilassata, zero fretta, risultato impeccabile. Dopo tre saloni sbagliati ho trovato il mio.»</blockquote>
+            <footer><strong>Sara M.</strong><span>Google</span></footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CONTATTI / CTA ======================= -->
+    <section class="section section--cta" id="contatti">
+      <div class="cta__glow cta__glow--teal" aria-hidden="true"></div>
+      <div class="cta__glow cta__glow--gold" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <p class="overline overline--gold">Prenota</p>
+          <h2>Il momento buono<br />è adesso.</h2>
+          <p class="section__lede">Chiama, scrivi su WhatsApp o passa a trovarci: la prima consulenza è gratuita e senza impegno.</p>
+        </header>
+
+        <div class="cta__actions reveal">
+          <a class="btn btn--gold btn--lg" href="tel:+390115551234">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            011 555 1234
+          </a>
+          <a class="btn btn--ghost-light btn--lg" href="https://wa.me/393335551234" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z"/><path d="M9 9.5c0 4 2.5 5.8 5.5 6.5l1-2-2-1-1 .7a5.6 5.6 0 0 1-2-2.2l.8-1L10 8.5l-1 1Z"/></svg>
+            Scrivi su WhatsApp
+          </a>
+        </div>
+
+        <div class="cta__info reveal">
+          <div class="cta__cell">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <h3>Dove siamo</h3>
+            <p>Via San Massimo 12<br />10123 Torino — San Salvario</p>
+          </div>
+          <div class="cta__cell">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+            <h3>Orari</h3>
+            <p>Mar – Ven · 9:00 – 19:00<br />Sab · 8:30 – 18:00 — Lun chiuso</p>
+          </div>
+          <div class="cta__cell">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+            <h3>Social</h3>
+            <p>@aureahairstudio<br />Rispondiamo entro un'ora.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PITCH (demo) ======================= -->
+    <section class="pitch" aria-label="Informazioni su questo sito dimostrativo">
+      <div class="container pitch__inner reveal">
+        <div class="pitch__text">
+          <p class="overline overline--tealdark">✦ Questo sito è una demo</p>
+          <h2>Ti piacerebbe averne uno così?</h2>
+          <p>Aurea non esiste (per ora): è un progetto dimostrativo per farti vedere cosa può diventare il sito della tua attività. Animazioni su misura, testi curati, niente template preconfezionati.</p>
+        </div>
+        <a class="btn btn--ink" href="mailto:fedefas.210@gmail.com?subject=Voglio%20un%20sito%20cos%C3%AC%20per%20la%20mia%20attivit%C3%A0">Parliamone →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="nav__brand nav__brand--footer" href="#top">
+          <svg class="nav__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="6.5" cy="17.5" r="2.6"/>
+            <circle cx="17.5" cy="17.5" r="2.6"/>
+            <path d="M8.6 15.6 17 3.5M15.4 15.6 7 3.5"/>
+          </svg>
+          <span class="nav__name">Aurea</span>
+        </a>
+        <p>Hair studio a Torino.<br />Trasformazioni, non solo tagli.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Mappa del sito">
+        <h3>Naviga</h3>
+        <a href="#servizi">Servizi</a>
+        <a href="#prima-dopo">Prima &amp; dopo</a>
+        <a href="#metodo">Il metodo</a>
+        <a href="#listino">Listino</a>
+        <a href="#recensioni">Recensioni</a>
+      </nav>
+
+      <div class="footer__col">
+        <h3>Contatti</h3>
+        <a href="tel:+390115551234">011 555 1234</a>
+        <a href="https://wa.me/393335551234" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#contatti">Via San Massimo 12, Torino</a>
+      </div>
+
+      <div class="footer__col">
+        <h3>Seguici</h3>
+        <a href="#" aria-disabled="true">Instagram</a>
+        <a href="#" aria-disabled="true">Facebook</a>
+        <a href="#" aria-disabled="true">TikTok</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> Aurea Hair Studio — Sito dimostrativo, nessun salone è stato (ancora) aperto.</p>
+      <a href="mailto:fedefas.210@gmail.com">Vuoi un sito così? Scrivimi</a>
+    </div>
+  </footer>
+
+  <noscript>
+    <style>
+      .scrub { height: auto !important; }
+      .scrub__pin { position: static !important; height: auto !important; padding: 110px 0 40px; }
+      .scrub__copy { position: static !important; opacity: 1 !important; visibility: visible !important; transform: none !important; margin: 24px auto; text-align: center; align-items: center; max-width: 560px !important; }
+      .scrub__copy--b { display: none; }
+      .scrub__hint, .scrub__progress, .scrub__canvas { display: none !important; }
+    </style>
+  </noscript>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
