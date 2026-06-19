@@ -19,7 +19,7 @@ potenziali clienti. Salone fittizio: **Aurea Hair Studio, Torino**.
   (hero statico con il frame finale) e funziona anche senza JavaScript.
 
 ## Per provarla in locale
-
+.
 ```bash
 cd parrucchiere
 python3 -m http.server 8000
